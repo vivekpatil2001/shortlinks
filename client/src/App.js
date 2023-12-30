@@ -15,12 +15,12 @@ function App() {
 
 
   const generateLink = async () => {
-    try {
+  
       const response = await axios.post('/link', {
         url,
         slug
       });
-
+      try {
       setShortUrl(response?.data?.data?.shortUrl)
 
     } catch (err) {
@@ -107,7 +107,7 @@ function App() {
         <div>
           <h2>All Links</h2>
 
-          {
+          {/* {
             links?.map((linkObj, index) => {
               const { url, slug, clicks } = linkObj;
 
@@ -119,7 +119,7 @@ function App() {
                 </div>
               )
             })
-          }
+          } */}
         </div>
       </div>
     </div>
